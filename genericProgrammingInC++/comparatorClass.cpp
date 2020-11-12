@@ -1,6 +1,17 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+template<typename ForwardIterator, typename T, class Compare>
+ForwardIterator search(ForwardIterator start, ForwardIterator end, T key,Compare cmp) {
+	while (start != end) {
+		if (cmp(*start,key)) {
+			return start;
+		}
+		start++;
+	}
+	return end;
+}
+
 class Book
 {
 public:
@@ -40,15 +51,22 @@ int main(int argc, char const *argv[])
 	l.push_back(b2);
 	l.push_back(b3);
 
-	Book bookToFind("C++", 110);
+	Book bookToFind("C", 110);
 	BookCompare comp;
-	if (comp(b2, bookToFind))
+	/*if (comp(b2, bookToFind))			//this will call the bool operator function because we have overloaded the round brackets
 	{
 		cout << "The books are same" << endl;
 	}
 	else
 	{
 		cout << "The books are not same" << endl;
+	}*/
+	auto it = search(l.begin(),l.end(),bookToFind,comp);
+	if(it != l.end()){
+		cout<<"book found !!";
+	}
+	else{
+		cout<<"book not found!!";
 	}
 	return 0;
 }

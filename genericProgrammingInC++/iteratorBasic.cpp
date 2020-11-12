@@ -1,6 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+
+// this is beneficial only if we want to comapare integers,what if we want to compare two objects of a class by their any attribute,then we use comparator
 template<typename ForwardIterator, typename T>
 ForwardIterator search(ForwardIterator start, ForwardIterator end, T key) {
 	while (start != end) {
