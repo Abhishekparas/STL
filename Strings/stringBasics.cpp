@@ -64,5 +64,14 @@ int main(){
     s.erase(index,len);
     cout<<s<<endl;
 
+
+    for(string::iterator it=s.begin(); it != s.end(); it++){
+        cout<<(*it);
+    }
+    cout<<endl;
+    for(auto x: s){
+        cout<<x;
+    }
+
     return 0;
 }
