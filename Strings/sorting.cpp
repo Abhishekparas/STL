@@ -11,7 +11,7 @@ bool comp(string s1,string s2){
 int main(){
     int n;
     cin>>n;
-    cin.get();
+    cin.get();          //most likely when i input n, i will press enter button for reading the strings, if i do not inlude this then the new line character will be considered as a input string ,therefore it is wise to use cin.get() to avoid the hassle
 
     string arr[n];
 
