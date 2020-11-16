@@ -5,3 +5,4 @@
 ## [Strings](https://github.com/Abhishekparas/STL/tree/master/Strings)
 
 ## [Vectors](https://github.com/Abhishekparas/STL/tree/master/vectors)
+## [Priority Queue](https://github.com/Abhishekparas/STL/tree/master/priorityQueue)
